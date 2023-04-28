@@ -1,0 +1,7 @@
+{
+    "log-driver": "syslog",
+    "log-opts": {
+      "syslog-address": "udp://127.0.0.1:12201",
+      "syslog-facility": "local1"
+    }
+  }

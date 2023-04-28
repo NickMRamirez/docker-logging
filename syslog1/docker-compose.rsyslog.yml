@@ -1,0 +1,17 @@
+version: "3"
+services:
+
+  syslog1:
+    image: rsyslog/syslog_appliance_alpine
+    volumes:
+      - "/vagrant/syslog1/rsyslog.conf:/etc/rsyslog.conf"
+    restart: unless-stopped
+    ports:
+      - target: 514
+        published: 514
+        protocol: udp
+        mode: host
+      - target: 514
+        published: 514
+        protocol: tcp
+        mode: host
